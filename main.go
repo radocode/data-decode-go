@@ -1,26 +1,25 @@
 package main
 
 import (
+	"bufio"
 	"bytes"
 	"errors"
 	"fmt"
+	"os"
 	"reflect"
 	"strconv"
 )
 
 func main() {
-
-	var b bytes.Buffer
-	b.Write([]byte("11A05AB398765UJ102N2300"))
-	fmt.Println(tlvParser(nil))       // nulo
-	fmt.Println(tlvParser(b.Bytes())) // con valor
-
-	// var c bytes.Buffer
-	// c.Write([]byte("1xcvcx1A05AB398765UJ102N2300"))
-	// fmt.Println(tlvParser(c.Bytes())) // corrupto
-	// c.Write([]byte(""))
-	// fmt.Println(tlvParser(c.Bytes())) // vacio
-
+	fmt.Println("Ingrese cadena a evaluar: ")
+	scanner := bufio.NewScanner(os.Stdin)
+	for scanner.Scan() {
+		fmt.Println(scanner.Text())
+		res, _ := tlvParser([]byte(scanner.Text()))
+		for r, i := range res {
+			fmt.Println(r, i)
+		}
+	}
 }
 
 func tlvParser(tlv []byte) (map[string]string, error) {
