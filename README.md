@@ -1,4 +1,4 @@
-# falabella-go-exam
+# data-decode-go
 
 TRAVIS CI: https://travis-ci.com/radocode/falabella-go-exam/
 
