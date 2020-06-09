@@ -1,5 +1,7 @@
 # data-decode-go
 
+![Go](https://github.com/radocode/data-decode-go/workflows/Go/badge.svg)
+
 TRAVIS CI: https://travis-ci.com/radocode/falabella-go-exam/
 
 Programa solucion al requerimiento de https://github.com/falabella-fif-inte/test-3
